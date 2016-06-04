@@ -7,7 +7,7 @@ image.onload = function() {
   makeGrayScale();
 }
 
-image.src = "https://blog.codepen.io/wp-content/uploads/2015/04/portland.jpg";
+image.src = "/images/GOPR0236.JPG";
 
 var makePixelGrayScale = function (r, g, b, a) {
   var y = (0.3 * r) + (0.59 * g) + (0.11 * b);
