@@ -7,7 +7,7 @@ image.onload = function() {
   makeGrayScale();
 }
 
-image.src = "https://raw.githubusercontent.com/katiepino/udacitytests/master/images/GOPR0236.JPG";
+image.src = "images/GOPR0236.JPG";
 
 var makePixelGrayScale = function (r, g, b, a) {
   var y = (0.3 * r) + (0.59 * g) + (0.11 * b);
@@ -16,7 +16,7 @@ var makePixelGrayScale = function (r, g, b, a) {
 
 function makeGrayScale() {
   var r, g, b, a;
-  var imageData = ctx.getImageData(0, 0, 640, 426);
+  var imageData = ctx.getImageData(0, 0, 640, 426); //throws SecurityError: Failed to execute 'getImageData' on 'CanvasRenderingContext2D': The canvas has been tainted by cross-origin data
   var numPixels = imageData.data.length/4;
   for (var i = 0; i < numPixels; i++) {
     r = imageData.data[i * 4 + 0];
